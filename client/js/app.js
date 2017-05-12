@@ -32,7 +32,7 @@ class EventsManager {
     }
 
     poblarCalendario(eventos) {
-          
+
         $('.calendario').fullCalendar({
             header: {
         		left: 'prev,next today',
@@ -128,7 +128,7 @@ class EventsManager {
     eliminarEvento(event, jsEvent){
 
       var form_data = new FormData()
-      form_data.append('id', event.id)
+      form_data.append('id', event.id)      
       $.ajax({
         url: '../server/delete_event.php',
         dataType: "json",

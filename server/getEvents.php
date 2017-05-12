@@ -17,6 +17,7 @@
           $todoElDia=false;
         }
         $response['eventos'][$i] = array(
+            "id" => $fila['id_evento'],
             "title" => $fila['titulo_evento'],
             "start" => $fila['fecini_evento']."T".$fila['horaini_evento'],
             "allDay" => $todoElDia,

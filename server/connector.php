@@ -101,7 +101,7 @@ require ('access.php');
     }
 
     function eliminarRegistro($tabla, $condicion){
-      $sql = "DELETE FROM ".$tabla." WHERE ".$condicion.";";
+      $sql = "DELETE FROM ".$tabla." WHERE ".$condicion.";";      
       return $this->ejecutarQuery($sql);
     }
 
@@ -126,7 +126,7 @@ require ('access.php');
         $sql .= ";";
       }else {
         $sql .= $condicion.";";
-      }      
+      }
       return $this->ejecutarQuery($sql);
     }
 
