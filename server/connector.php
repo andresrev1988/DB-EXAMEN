@@ -115,7 +115,6 @@ require ('access.php');
           $sql.=", ";
         }else $sql .=" FROM ";
       }
-
       $ultima_key = end(array_keys($tablas));
       foreach ($tablas as $key => $value) {
         $sql .= $value;
@@ -128,8 +127,7 @@ require ('access.php');
         $sql .= ";";
       }else {
         $sql .= $condicion.";";
-      }
-
+      }      
       return $this->ejecutarQuery($sql);
     }
 

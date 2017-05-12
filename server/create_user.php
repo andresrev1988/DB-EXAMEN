@@ -96,10 +96,10 @@ $data['email_user'] = "'user@dominio.com'";
 $data['pass_user'] = "'".password_hash('clave', PASSWORD_DEFAULT)."'";
 $data['fecnac_user'] = "'1988-03-11'";
 $data1['email_user'] = "'user1@dominio.com'";
-$data1['pass_user'] = "'".password_hash('clave', PASSWORD_DEFAULT)."'";
+$data1['pass_user'] = "'".password_hash('clave1', PASSWORD_DEFAULT)."'";
 $data1['fecnac_user'] = "'1989-04-12'";
 $data2['email_user'] = "'user2@dominio.com'";
-$data2['pass_user'] = "'".password_hash('clave', PASSWORD_DEFAULT)."'";
+$data2['pass_user'] = "'".password_hash('clave2', PASSWORD_DEFAULT)."'";
 $data2['fecnac_user'] = "'1985-05-02'";
 
 if ($response['conexion']=='OK') {
