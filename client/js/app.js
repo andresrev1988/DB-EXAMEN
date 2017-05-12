@@ -17,7 +17,7 @@ class EventsManager {
           contentType: false,
           type: 'GET',
           success: (data) =>{
-            if (data.msg=="OK") {
+            if (data.msg=="OK") {              
               this.poblarCalendario(data.eventos)
             }else {
               alert(data.msg)
