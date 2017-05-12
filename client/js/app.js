@@ -17,7 +17,7 @@ class EventsManager {
           contentType: false,
           type: 'GET',
           success: (data) =>{
-            if (data.msg=="OK") {              
+            if (data.msg=="OK") {
               this.poblarCalendario(data.eventos)
             }else {
               alert(data.msg)
@@ -32,13 +32,14 @@ class EventsManager {
     }
 
     poblarCalendario(eventos) {
+          
         $('.calendario').fullCalendar({
             header: {
         		left: 'prev,next today',
         		center: 'title',
         		right: 'month,agendaWeek,basicDay'
         	},
-        	defaultDate: '2016-11-01',
+        	defaultDate: '2017-05-01',
         	navLinks: true,
         	editable: true,
         	eventLimit: true,

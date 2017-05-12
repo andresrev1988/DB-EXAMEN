@@ -79,7 +79,6 @@ require ('access.php');
         }else $sql .= ');';
         $i++;
       }
-      echo ($sql);
       return $this->ejecutarQuery($sql);
 
     }

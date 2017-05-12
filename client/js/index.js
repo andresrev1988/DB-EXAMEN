@@ -27,7 +27,7 @@ class Login {
       contentType: false,
       data: form_data,
       type: 'POST',
-      success: function(php_response){
+      success: function(php_response){        
         if (php_response.acceso == "concedido") {
           window.location.href = 'main.html';
         }else {

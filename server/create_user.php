@@ -68,7 +68,8 @@ if ($response['conexion']=='OK') {
               horaini_evento time DEFAULT NULL,
               fecfin_evento date DEFAULT NULL,
               horafin_evento time DEFAULT NULL,
-              diacom_evento tinyint(1) NOT NULL
+              diacom_evento boolean NOT NULL,
+              fk_id_user int(11) NOT NULL
             ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
         if($con->ejecutarQuery($sql)){
           $response['msg']="exito en la creacion de la tabla";
@@ -90,7 +91,19 @@ if ($response['conexion']=='OK') {
         }else {
           $response['msg']= "No se pudo conectar a la base de datos";
         }
+        ///crea las autoincereme
         echo json_encode($response);
+        if ($response['conexion']=='OK') {
+            $sql= "ALTER TABLE eventos MODIFY id_evento int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13";
+            if($con->ejecutarQuery($sql)){
+              $response['msg']="exito en agregar autoincrement";
+            }else {
+              $response['msg']= "Hubo un error y los datos no han sido cargados";
+            }
+          }else {
+            $response['msg']= "No se pudo conectar a la base de datos";
+          }
+          echo json_encode($response);
 //CREA usuarios
 $data['email_user'] = "'user@dominio.com'";
 $data['pass_user'] = "'".password_hash('clave', PASSWORD_DEFAULT)."'";
